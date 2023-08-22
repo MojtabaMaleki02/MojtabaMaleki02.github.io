@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Order Page</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Order Code</th>
+                <th>Amount of Bitcoin</th>
+                <th>Date</th>
+                <th>User Name</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Generate 200 rows with random data using JavaScript -->
+            <!-- You can replace this with your actual data -->
+            <script>
+                const months = [
+                    "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"
+                ];
+
+                for (let i = 1; i <= 200; i++) {
+                    const row = document.createElement("tr");
+
+                    // Generate random password in the style: qwd123nfsap92nda
+                    const password = Array.from({ length: 15 }, () =>
+                        String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+                    ).join("") + Math.floor(Math.random() * 100);
+
+                    // Generate random username in the style: aposdasdlnvpkdaof
+                    const username = Array.from({ length: 16 }, () =>
+                        String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+                    ).join("");
+
+                    // Generate a random month from Jan to Aug
+                    const month = months[Math.floor(Math.random() * months.length)];
+
+                    row.innerHTML = `
+                        <td>${i}</td>
+                        <td>Order${i}</td>
+                        <td>${Math.floor(Math.random() * 10) + 1} BTC</td>
+                        <td>${month}</td>
+                        <td>${username}</td>
+                        <td>${password}</td>
+                    `;
+
+                    document.querySelector("tbody").appendChild(row);
+                }
+            </script>
+        </tbody>
+    </table>
+</body>
+</html>
