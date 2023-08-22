@@ -128,6 +128,45 @@
             font-size: 16px;
             margin-top: 15px;
         }
+
+        /* Style for the login form */
+        .login-form {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-content {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .login-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        .login-button:hover {
+            background-color: #555;
+            
+        }
     </style>
 </head>
 <body>
@@ -143,6 +182,7 @@
             <h1>Welcome to the AI Black Market</h1>
             <p>Where cutting-edge artificial intelligence meets the darkest of desires.</p>
         </div>
+        <button class="login-button" onclick="showLoginForm()">Login</button>
 
         <!-- AI Product List -->
         <div class="product">
@@ -201,6 +241,21 @@
     </div>
 </div>
 
+    <!-- Login Form -->
+    <div id="loginForm" class="login-form">
+        <div class="login-content">
+            <h2>Login</h2>
+            <p>Enter the credentials to access the restricted area.</p>
+            <form onsubmit="checkLogin(); return false;">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+                <button class="login-button" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
 <!-- JQuery -->
 <script>
     function openBitcoinModal(price) {
@@ -215,6 +270,26 @@
     function closeBitcoinModal() {
         const modal = document.getElementById('bitcoinModal');
         modal.style.display = 'none';
+    }
+
+    // Function to check login credentials
+    function checkLogin() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Check if the provided credentials are valid
+        if (username === "admin' OR '1'=='1" || password === "password") {
+            // Redirect to another webpage when credentials are valid
+            window.location.href = "another-webpage.html";
+        } else {
+            alert("Invalid username or password. Try again.");
+        }
+    }
+
+    // Function to display the login form
+    function showLoginForm() {
+        const loginForm = document.getElementById('loginForm');
+        loginForm.style.display = 'flex';
     }
 </script>
 </body>
