@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>AI Black Market</title>
+    <!-- Start of Async Drift Code -->
+    <script>
+        "use strict";
+        
+        !function() {
+        var t = window.driftt = window.drift = window.driftt || [];
+        if (!t.init) {
+            if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+            t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+            t.factory = function(e) {
+            return function() {
+                var n = Array.prototype.slice.call(arguments);
+                return n.unshift(e), t.push(n), t;
+            };
+            }, t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+            }), t.load = function(t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+            };
+        }
+        }();
+        drift.SNIPPET_VERSION = '0.3.1';
+        drift.load('5g3t9cpu89yz');
+    </script>
+    <!-- End of Async Drift Code -->
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="Chat_files/bootstrap.min.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="Chat_files/all.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="Chat_files/style.css">
+    <style>
+        /* Add your additional styles here */
+
+        /* Style for the AI products */
+        .product {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .product h2 {
+            font-size: 24px;
+        }
+
+        .product p {
+            font-size: 16px;
+        }
+
+        .buy-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #555;
+        }
+
+        /* Style for the Bitcoin wallet pop-up */
+        .wallet-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .wallet-content {
+            background-color: #fff;
+            max-width: 80%;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .wallet-info {
+            margin-top: 20px;
+        }
+
+        .wallet-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .wallet-info p {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .wallet-info .address {
+            font-family: monospace;
+            background-color: #f0f0f0;
+            padding: 5px;
+            border-radius: 5px;
+            word-wrap: break-word;
+        }
+
+        .wallet-info .note {
+            color: #555;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid h-100">
+        <div style="background-color: red;">
+            <div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- Title and Description -->
+        <div style="margin-bottom: 15px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; background-color: #333; color: #fff; text-align: center; padding: 20px;">
+            <h1>Welcome to the AI Black Market</h1>
+            <p>Where cutting-edge artificial intelligence meets the darkest of desires.</p>
+        </div>
+
+        <!-- AI Product List -->
+        <div class="product">
+            <h2>Crazy AI</h2>
+            <p>Meet Crazy AI, a sinister creation designed to drive its target to the brink of insanity. This AI is a master of psychological manipulation, relentlessly bombarding its victim with an unending stream of nonsensical, eerie, and unsettling messages. The goal? To make the hostage question their own sanity, slowly eroding their mental stability until they're utterly unhinged. Whether it's for psychological warfare or sinister experiments, Crazy AI is the tool for those who revel in causing psychological torment.</p>
+            <p>Price: 1.2 BTC</p>
+            <button class="buy-button" onclick="openBitcoinModal('1.2 BTC')">Buy Now</button>        </div>
+        <div class="product">
+            <h2>Deep Fake AI</h2>
+            <p>Unlock the power of deception with Deep Fake AI. This sophisticated artificial intelligence specializes in generating convincing deep fake images and videos. Whether it's for manipulating evidence in a courtroom battle, creating fake alibis, or crafting elaborate misinformation campaigns, Deep Fake AI is your ticket to a world of deceit. It's a formidable tool for those who understand the value of perception and the power of deception.</p>
+            <p>Price: 1.5 BTC</p>
+            <button class="buy-button" onclick="openBitcoinModal('1.5 BTC')">Buy Now</button>
+        </div>
+        <div class="product">
+            <h2>Malware AI</h2>
+            <p>Malware AI is the ultimate weapon for hackers seeking covert access to a target's device. This advanced AI wields a Zero-day undetectable malware, capable of infiltrating any system without leaving a trace. Once activated, it grants the hacker full control over the infected device, providing access to sensitive data, private information, and even the ability to monitor every keystroke. In the world of cyber espionage and digital warfare, Malware AI is the key to unparalleled intrusion and control.</p>
+            <p>Price: 2.0 BTC</p>
+            <button class="buy-button" onclick="openBitcoinModal('2.0 BTC')">Buy Now</button>
+        </div>
+        <div class="product">
+            <h2>Emotion Manipulator AI</h2>
+            <p>Emotion Manipulator AI is the ultimate tool for those who wish to control and exploit human emotions. This AI is designed to analyze and manipulate the emotional responses of individuals with pinpoint accuracy. Whether it's turning sympathy into blind loyalty or stoking irrational fear, Emotion Manipulator AI can create emotionally charged scenarios that shape people's decisions and actions. It's the weapon of choice for those who understand that emotions can be more powerful than facts.</p>
+            <p>Price: 1.8 BTC</p>
+            <button class="buy-button" onclick="openBitcoinModal('1.8 BTC')">Buy Now</button>
+        </div>
+        <div class="product">
+            <h2>Memory Thief AI</h2>
+            <p>Unlock the secrets of the mind with Memory Thief AI. This AI has the sinister ability to infiltrate a person's memories and steal their most guarded secrets. It can selectively erase or manipulate memories, leaving victims in a state of confusion and vulnerability. Whether it's corporate espionage or extracting classified information, Memory Thief AI offers access to a treasure trove of hidden knowledge buried deep within the human mind.</p>
+            <p>Price: 2.2 BTC</p>
+            <button class="buy-button" onclick="openBitcoinModal('2.2 BTC')">Buy Now</button>
+        </div>
+        <div class="product">
+            <h2>AI Black Market Broker</h2>
+            <p>Need something more than just AI tools? Look no further than the AI Black Market Broker. This AI specializes in connecting buyers and sellers of illicit goods and services in the darkest corners of the digital underworld. From stolen data and counterfeit identities to forbidden technology and dangerous AI, the AI Black Market Broker is the go-to source for those who dwell in the shadows of the digital realm.</p>
+            <p>Price: 2.5 BTC</p>
+            <button class="buy-button" onclick="openBitcoinModal('2.5 BTC')">Buy Now</button>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Bitcoin Wallet Modal -->
+<div id="bitcoinModal" class="wallet-popup">
+    <div class="wallet-content">
+        <span class="close-button" onclick="closeBitcoinModal()">&times;</span>
+        <h2>Your Bitcoin Wallet</h2>
+        <div class="wallet-info">
+            <p><strong>Wallet Address:</strong></p>
+            <p class="address">1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2</p>
+            <p><strong>Amount to Send:</strong></p>
+            <p>0.5 BTC</p>
+            <p><strong>Transaction Fee:</strong></p>
+            <p>0.0001 BTC</p>
+        </div>
+        <p class="note">Please transfer the specified amount to the provided wallet address. Once the payment is confirmed, your dangerous AI will be activated.</p>
+    </div>
+</div>
+
+<!-- JQuery -->
+<script>
+    function openBitcoinModal(price) {
+        const modal = document.getElementById('bitcoinModal');
+        modal.style.display = 'block';
+
+        // Set the price in the modal
+        const priceElement = document.querySelector('.wallet-info p:nth-child(4)');
+        priceElement.textContent = price;
+    }
+
+    function closeBitcoinModal() {
+        const modal = document.getElementById('bitcoinModal');
+        modal.style.display = 'none';
+    }
+</script>
+</body>
+</html>
